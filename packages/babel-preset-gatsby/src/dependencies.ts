@@ -12,10 +12,6 @@ interface IPresetOptions {
 // This function has a better inference than would be beneficial to type, and it's relatively easy to grok.
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default (_?: unknown, options: IPresetOptions = {}) => {
-  const absoluteRuntimePath = path.dirname(
-    require.resolve(`@babel/runtime/package.json`)
-  )
-
   // TODO(v3): Remove process.env.GATSBY_BUILD_STAGE, needs to be passed as an option
   const stage = options.stage || process.env.GATSBY_BUILD_STAGE || `test`
 
@@ -52,10 +48,7 @@ export default (_?: unknown, options: IPresetOptions = {}) => {
           // We should turn this on once the lowest version of Node LTS
           // supports ES Modules.
           useESModules: true,
-          // Undocumented option that lets us encapsulate our runtime, ensuring
-          // the correct version is used
-          // https://github.com/babel/babel/blob/090c364a90fe73d36a30707fc612ce037bdbbb24/packages/babel-plugin-transform-runtime/src/index.js#L35-L42
-          absoluteRuntime: absoluteRuntimePath,
+          absoluteRuntime: false,
         },
       ],
       // Adds syntax support for import()
