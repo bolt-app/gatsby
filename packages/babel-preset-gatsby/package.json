@@ -1,13 +1,13 @@
 {
-  "name": "babel-preset-gatsby",
-  "version": "0.5.1",
+  "name": "@bolt-app/babel-preset-gatsby",
+  "version": "0.5.1-bolt.0",
   "author": "Philipp Spiess <hello@philippspiess.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby.git",
+    "url": "https://github.com/bolt-app/gatsby.git",
     "directory": "packages/babel-preset-gatsby"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby/tree/master/packages/babel-preset-gatsby#readme",
+  "homepage": "https://github.com/bolt-app/gatsby/tree/master/packages/babel-preset-gatsby#readme",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.1",
